@@ -3,10 +3,6 @@
 import SwiftUI
 import AirshipCore
 
-#if DEBUG && canImport(AirshipDebug)
-import AirshipDebug
-#endif
-
 @main
 struct MainApp: App {
     
@@ -22,7 +18,6 @@ struct MainApp: App {
             try AirshipInitializer.initialize()
 
             // Setup optional features
-            LiveActivityHandler.setup()
             PushNotificationHandler.setup()
             DeepLinkHandler.setup(router: appRouter) { [weak toast] error in
                 toast?.message = .init(text: "Invalid deepLink \(error)", duration: 2.0)
@@ -49,9 +44,6 @@ struct MainApp: App {
                             }
                         }
                     }
-#if DEBUG && canImport(AirshipDebug)
-                    .airshipDebugOnShake()
-#endif
             } else {
                 ErrorFallbackView(error: takeOffError)
             }
