@@ -49,7 +49,7 @@ This repository contains sample applications demonstrating how to integrate Airs
     - Airship Sample tvOS: `Airship Sample tvOS/Airship Sample tvOS/AirshipInitializer.swift`
 
 4. **Verify Bundle Identifier**
-   - Ensure your app's bundle identifier matches the one configured in your Urban Airship dashboard
+   - Ensure your app's bundle identifier matches the one configured in your Airship dashboard
    - Update the bundle identifier in Xcode project settings if needed
 
 5. **Build and run**
@@ -59,8 +59,8 @@ This repository contains sample applications demonstrating how to integrate Airs
 ## 🔧 Configuration Details
 
 ### Required Credentials
-- **App Key**: Found in your Urban Airship dashboard under Project Settings
-- **App Secret**: Found in your Urban Airship dashboard under Project Settings  
+- **App Key**: Found in your Airship dashboard under Project Settings
+- **App Secret**: Found in your Airship dashboard under Project Settings  
 - **Bundle Identifier**: Must match the bundle ID configured in your Airship app settings
 
 ### Where to Find Credentials
