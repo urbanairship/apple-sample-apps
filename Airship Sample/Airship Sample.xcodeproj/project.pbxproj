@@ -1140,8 +1140,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/urbanairship/ios-library";
 			requirement = {
-				branch = "20.0.0-rc1";
-				kind = branch;
+				kind = exactVersion;
+				version = 20.6.0;
 			};
 		};
 		6E7EDC672E8B358F0040BCD0 /* XCRemoteSwiftPackageReference "ios-library" */ = {
@@ -1149,7 +1149,7 @@
 			repositoryURL = "https://github.com/urbanairship/ios-library";
 			requirement = {
 				kind = exactVersion;
-				version = 20.0.0;
+				version = 20.6.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
