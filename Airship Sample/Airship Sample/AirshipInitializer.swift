@@ -13,8 +13,7 @@ struct AirshipInitializer {
 
     // Replace with your app's config
     private static let defaultAppKey: String = "YOUR_APP_KEY"
-    private static let defaultAppSecret: String = "
-"
+    private static let defaultAppSecret: String = "YOUR_APP_SECRET"
 
     private init() {}
     
