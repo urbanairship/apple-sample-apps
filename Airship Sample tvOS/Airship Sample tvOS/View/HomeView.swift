@@ -1,6 +1,7 @@
 /* Copyright Urban Airship and Contributors */
 
 import AirshipCore
+import AirshipScenes
 import Combine
 import SwiftUI
 
