@@ -93,8 +93,6 @@ struct DeepLinkHandler {
         case "home":
             router.homePath = []
             router.selectedTab = .home
-        case "scenes":
-            router.selectedTab = .scenes
         case "message_center":
             router.selectedTab = .messageCenter
         case "preferences":

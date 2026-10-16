@@ -8,7 +8,6 @@ struct MainApp: App {
     
     let appRouter: AppRouter = AppRouter()
     let toast: Toast = Toast()
-    let sceneGate: SceneDisplayGate = SceneDisplayGate()
     var takeOffError: (any Error)?
 
     @Environment(\.scenePhase) private var scenePhase
@@ -20,7 +19,6 @@ struct MainApp: App {
 
             // Setup optional features
             PushNotificationHandler.setup()
-            sceneGate.install()
             DeepLinkHandler.setup(router: appRouter) { [weak toast] error in
                 toast?.message = .init(text: "Invalid deepLink \(error)", duration: 2.0)
             }
@@ -36,7 +34,6 @@ struct MainApp: App {
                 AppView()
                     .environmentObject(appRouter)
                     .environmentObject(toast)
-                    .environmentObject(sceneGate)
                     .airshipOnChangeOf(scenePhase) { phase in
                         if phase == .active {
                             print("App became active!")
