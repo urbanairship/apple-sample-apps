@@ -15,6 +15,8 @@ final class AppRouter: ObservableObject {
 
     enum Tabs: Sendable, Equatable, Hashable {
         case home
+        case scenes
+        case messageCenter
         case preferenceCenter
     }
 

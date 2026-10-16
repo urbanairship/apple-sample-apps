@@ -54,6 +54,12 @@ struct DeepLinkHandler {
             }
         }
 
+        // Message Center routing
+        Airship.messageCenter.onDisplay = { [weak router] _ in
+            router?.selectedTab = .messageCenter
+            return true
+        }
+
         // Preference Center routing
         Airship.preferenceCenter.onDisplay = { [weak router] identifier in
             guard identifier == router?.preferenceCenterID else {
@@ -87,6 +93,10 @@ struct DeepLinkHandler {
         case "home":
             router.homePath = []
             router.selectedTab = .home
+        case "scenes":
+            router.selectedTab = .scenes
+        case "message_center":
+            router.selectedTab = .messageCenter
         case "preferences":
             router.selectedTab = .preferenceCenter
         default:

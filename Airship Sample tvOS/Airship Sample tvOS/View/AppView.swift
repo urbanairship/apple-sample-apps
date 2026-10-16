@@ -27,6 +27,30 @@ struct AppView: View {
                 }
                 .tag(AppRouter.Tabs.home)
 
+            ScenesView()
+                .tabItem {
+                    Label(
+                        "Scenes",
+                        systemImage: "rectangle.on.rectangle"
+                    )
+                }
+                .onAppear {
+                    Airship.analytics.trackScreen("scenes")
+                }
+                .tag(AppRouter.Tabs.scenes)
+
+            MessageCenterView()
+                .tabItem {
+                    Label(
+                        "Message Center",
+                        systemImage: "tray.fill"
+                    )
+                }
+                .onAppear {
+                    Airship.analytics.trackScreen("message_center")
+                }
+                .tag(AppRouter.Tabs.messageCenter)
+
             PreferenceCenterView(
                 preferenceCenterID: router.preferenceCenterID
             )
@@ -54,6 +78,7 @@ struct AppView_Previews: PreviewProvider {
         AppView()
             .environmentObject(AppRouter())
             .environmentObject(Toast())
+            .environmentObject(SceneDisplayGate())
 
     }
 }
