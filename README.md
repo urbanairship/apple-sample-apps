@@ -19,8 +19,8 @@ This repository contains sample applications demonstrating how to integrate Airs
 ### Airship Sample tvOS
 - **Platform**: tvOS
 - **Language**: Swift
-- **Features**: Push notifications, Preference Center
-- **Architecture**: SwiftUI optimized for Apple TV
+- **Features**: Push notifications, Message Center, Preference Center
+- **Architecture**: SwiftUI optimized for Apple TV, driven with the Siri Remote
 
 ## 🚀 Quick Start
 
@@ -70,6 +70,15 @@ This repository contains sample applications demonstrating how to integrate Airs
 4. Copy your **App Key** and **App Secret**
 5. Verify your **Bundle Identifier** matches your Xcode project
 
+
+## 📺 Apple TV Sample
+
+The tvOS sample is built for the Siri Remote:
+
+- **Home**: an `AirshipEmbeddedView` with embedded ID `test`. Create an embedded Scene that targets that ID to see it replace the placeholder image.
+- **Message Center**: `MessageCenterView` lists messages and shows native (Scene) messages.
+
+Modal and banner Scenes need no view code: Airship presents them over your app. Without a campaign targeting the app there is nothing to show, so create Scenes and a Message Center message in the Airship dashboard and send them to the app's channel.
 
 ## 🛠 Troubleshooting
 

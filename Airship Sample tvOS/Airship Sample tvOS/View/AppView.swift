@@ -27,6 +27,18 @@ struct AppView: View {
                 }
                 .tag(AppRouter.Tabs.home)
 
+            MessageCenterView()
+                .tabItem {
+                    Label(
+                        "Message Center",
+                        systemImage: "tray.fill"
+                    )
+                }
+                .onAppear {
+                    Airship.analytics.trackScreen("message_center")
+                }
+                .tag(AppRouter.Tabs.messageCenter)
+
             PreferenceCenterView(
                 preferenceCenterID: router.preferenceCenterID
             )

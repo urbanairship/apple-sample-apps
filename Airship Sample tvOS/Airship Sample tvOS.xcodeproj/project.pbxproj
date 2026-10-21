@@ -27,6 +27,7 @@
 		6EAAE98228C7E18C003CAE53 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6EAAE98128C7E18C003CAE53 /* Preview Assets.xcassets */; };
 		6EAAE98A28C7E1A1003CAE53 /* MainApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAAE8BC28C7C9A3003CAE53 /* MainApp.swift */; };
 		99E6F0632B97E11E0006326A /* TestAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 99E6F0622B97E11E0006326A /* TestAssets.xcassets */; };
+		6E7C38F52E8B3D00006120C8 /* AirshipMessageCenter in Frameworks */ = {isa = PBXBuildFile; productRef = 6E7C38F42E8B3D00006120C8 /* AirshipMessageCenter */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -97,6 +98,7 @@
 				6E7EDC322E8B2ACD0040BCD0 /* AirshipPreferenceCenter in Frameworks */,
 				279DCD942E857BD0008B5542 /* AirshipCore in Frameworks */,
 				6E7EDC2C2E8B2ACD0040BCD0 /* AirshipAutomation in Frameworks */,
+				6E7C38F52E8B3D00006120C8 /* AirshipMessageCenter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -565,6 +567,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 279DCD922E857BD0008B5542 /* XCRemoteSwiftPackageReference "ios-library" */;
 			productName = AirshipDebug;
+		};
+		6E7C38F42E8B3D00006120C8 /* AirshipMessageCenter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 279DCD922E857BD0008B5542 /* XCRemoteSwiftPackageReference "ios-library" */;
+			productName = AirshipMessageCenter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
